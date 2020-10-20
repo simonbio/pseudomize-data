@@ -120,6 +120,8 @@ server <- function(input, output) {
       }
     )
     
+    colnames(df) <- toupper(trimws(colnames(df)))
+    
     if(input$disp == "head") {
       return(head(df))
     }
